@@ -1,3 +1,7 @@
+:root {
+    --global-padding: 10ch;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -11,17 +15,32 @@ body {
 
 #headerDesign {
     display: flex;
-    justify-content: end;
-    align-items: flex-end;
-    background-color: blanchedalmond;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding-left: var(--global-padding);
+    padding-right: var(--global-padding);
+}
+
+#logo-container {
+    display: flex;
+    align-items: center;
+}
+
+#logo-design {
+    width: auto;
+    max-height: 5rem;
 }
 
 .container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .link {
+    font-family: "Dancing Script", cursive;
+    font-size: large;
     text-decoration: none;
     color: black;
     padding: 1.5em;
@@ -31,25 +50,80 @@ body {
     background-color: #e7efc5;
 }
 
+
 #section-home {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     padding-top: 20px;
+    padding-left: var(--global-padding);
+    padding-right: var(--global-padding);
     flex-wrap: wrap;
 }
 
 #text-title-home {
+    font-family: "Dancing Script", cursive;
     font-size: 10vh;
     font-weight: bold;
     color: antiquewhite;
 }
 
 #text-subtitle-home {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 5vh;
     color: antiquewhite;
 }
 
 #img-home {
     width: auto;
     max-height: 45rem;
+    object-fit: cover;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;;
+}
+
+#icon-design{
+    padding-left: 1rem;
+}
+
+#cv-btn {
+    background-color: #e7efc5;
+    padding: 1.5ch 3ch;
+    cursor: pointer;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: bold;
+    color: #373247;
+    font-size: large;
+    text-decoration: none;
+    border-radius: 3ch;
+    transition: all 0.5s ease;
+}
+
+#cv-btn:hover {
+    box-shadow: 0 4px 16px rgb(212, 211, 155, 1);
+    transition: all 0.5s ease;
+}
+
+@media (max-width: 768px) {
+    #text-title-home {
+        font-size: 7vh;
+    }
+
+    #text-subtitle-home {
+        font-size: 3vh;
+    }
+
+    #section-home {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #img-home {
+        max-width: 100%;
+    }
 }
