@@ -5,9 +5,8 @@ body {
     min-height: 100vh;
     width: 100vw;
 
-    background: linear-gradient(320deg, #e4c897, #c3d08b, #A3C4BC);
+    background-color: #373247;
 
-    font-family: "Great Vibes", cursive, bold;
 }
 
 #headerDesign {
@@ -30,4 +29,27 @@ body {
 
 .link:hover {
     background-color: #e7efc5;
+}
+
+#section-home {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+#text-title-home {
+    font-size: 10vh;
+    font-weight: bold;
+    color: antiquewhite;
+}
+
+#text-subtitle-home {
+    color: antiquewhite;
+}
+
+#img-home {
+    width: auto;
+    max-height: 45rem;
 }
