@@ -1,5 +1,5 @@
 :root {
-    --global-padding: 10ch;
+    --global-padding: 20ch;
 }
 
 body {
@@ -10,7 +10,11 @@ body {
     width: 100vw;
 
     background-color: #373247;
+    overflow-x: hidden; 
+}
 
+body::-webkit-scrollbar {
+    width: 0.1px; 
 }
 
 #headerDesign {
@@ -44,22 +48,31 @@ body {
     text-decoration: none;
     color: black;
     padding: 1.5em;
+    transition: 0.3s;
 }
 
 .link:hover {
-    background-color: #e7efc5;
+    transition: 0.3s;
+    color: #e7efc5;
+    background-color: #373247;
 }
 
 
 #section-home {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    padding-top: 20px;
+    justify-content: space-between;
+    padding-top: 15ch;
     padding-left: var(--global-padding);
     padding-right: var(--global-padding);
     flex-wrap: wrap;
 }
+
+#section-home > div:first-child {
+    flex: 1 1 auto;
+    max-width: 50%; 
+}
+
 
 #text-title-home {
     font-family: "Dancing Script", cursive;
@@ -71,13 +84,23 @@ body {
 #text-subtitle-home {
     font-family: "Cormorant Garamond", serif;
     font-size: 5vh;
+    line-height: 1.5;
+    color: antiquewhite;
+}
+
+#text-info-home {
+    font-family: "Cormorant Garamond", serif;
+    text-wrap: wrap;
+    font-size: 2.5vh;
+    line-height: 1.5;
     color: antiquewhite;
 }
 
 #img-home {
     width: auto;
-    max-height: 45rem;
+    max-height: 40rem;
     object-fit: cover;
+    flex: 0 1 auto;
 }
 
 .button-container {
@@ -108,14 +131,7 @@ body {
     transition: all 0.5s ease;
 }
 
-@media (max-width: 768px) {
-    #text-title-home {
-        font-size: 7vh;
-    }
-
-    #text-subtitle-home {
-        font-size: 3vh;
-    }
+@media (max-width: 1345px) {
 
     #section-home {
         flex-direction: column;
@@ -126,4 +142,14 @@ body {
     #img-home {
         max-width: 100%;
     }
+}
+
+#section-about {
+    padding-top: 15ch;
+    padding-left: var(--global-padding);
+}
+
+#section-projects {
+    padding-top: 15ch;
+    padding-left: var(--global-padding);
 }
