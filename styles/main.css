@@ -53,7 +53,7 @@ body::-webkit-scrollbar {
 
 .link:hover {
     transition: 0.3s;
-    color: #e7efc5;
+    color: #E2D0BE;
     background-color: #373247;
 }
 
@@ -91,7 +91,7 @@ body::-webkit-scrollbar {
 
 .dropdown-content a:hover {
     background-color: #373247;
-    color: antiquewhite;
+    color: #E2D0BE;
 }
 
 .dropdown:hover .dropdown-content {
@@ -100,7 +100,7 @@ body::-webkit-scrollbar {
 
 .dropdown:hover .dropbtn {
     background-color: #373247;
-    color: antiquewhite;
+    color: #E2D0BE;
 }
 
 @media (max-width: 768px) {
@@ -132,14 +132,14 @@ body::-webkit-scrollbar {
     font-family: "Dancing Script", cursive;
     font-size: 10vh;
     font-weight: bold;
-    color: antiquewhite;
+    color: #E2D0BE;
 }
 
 #text-subtitle-home {
     font-family: "Cormorant Garamond", serif;
     font-size: 5vh;
     line-height: 1.5;
-    color: antiquewhite;
+    color: #f16575;
 }
 
 #text-info-home {
@@ -147,7 +147,7 @@ body::-webkit-scrollbar {
     text-wrap: wrap;
     font-size: 2.5vh;
     line-height: 1.5;
-    color: antiquewhite;
+    color: #E2D0BE;
 }
 
 #img-home {
@@ -169,9 +169,19 @@ body::-webkit-scrollbar {
     padding-left: 1rem;
 }
 
+#icon-img-design {
+    width: 4.5rem;
+    transition: 0.5s;
+}
+
+#icon-img-design:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+
 #cv-btn {
-    background-color: #e7efc5;
-    padding: 1.5ch 3ch;
+    background-color: #E2D0BE;
+    padding: 2ch 3ch;
     cursor: pointer;
     font-family: "Cormorant Garamond", serif;
     font-weight: bold;
@@ -179,20 +189,35 @@ body::-webkit-scrollbar {
     font-size: large;
     text-decoration: none;
     border-radius: 3ch;
-    transition: all 0.5s ease;
+    transition:0.5s;
 }
 
 #cv-btn:hover {
-    box-shadow: 0 4px 16px rgb(212, 211, 155, 1);
-    transition: all 0.5s ease;
+    transition:0.5s;
+    transform: scale(1.1);
 }
 
 @media (max-width: 1345px) {
 
+    #headerDesign {
+        padding: 2ch;
+    }
+
     #section-home {
+        padding: 2ch;
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+
+    #icon-img-design {
+        width: 2.2rem;
+    }
+
+    #cv-btn {
+        padding: 0.7ch 2.5ch;
+        color: #373247;
+        font-size: medium;
     }
 
     #img-home {
@@ -201,11 +226,13 @@ body::-webkit-scrollbar {
 }
 
 #section-about {
+    display: flex;
     padding-top: 15ch;
     padding-left: var(--global-padding);
 }
 
 #section-projects {
+    display: flex;
     padding-top: 15ch;
     padding-left: var(--global-padding);
 }

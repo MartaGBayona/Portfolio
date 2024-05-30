@@ -1,18 +1,24 @@
-console.log('Antes de DOMContentLoaded');
+
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('El DOM ha sido cargado');
     const dropdown = document.querySelector('.dropdown');
     const dropdownContent = document.querySelector('.dropdown-content');
-    console.log('Dropdown:', dropdown);
-    console.log('Dropdown Content:', dropdownContent);
     
     dropdown?.addEventListener('mouseenter', () => {
-        console.log('El ratón ha entrado en el dropdown');
         dropdownContent?.classList.add('show');
     });
 
     dropdown?.addEventListener('mouseleave', () => {
-        console.log('El ratón ha salido del dropdown');
         dropdownContent?.classList.remove('show');
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener('resize', () => {
+        const cvButton = document.getElementById('cv-btn');
+        if (cvButton && window.innerWidth <= 768) {
+            cvButton.textContent = 'CV';
+        } else if (cvButton) {
+            cvButton.textContent = 'Descargar CV';
+        }
     });
 });
