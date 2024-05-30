@@ -24,6 +24,10 @@ body::-webkit-scrollbar {
     background-color: white;
     padding-left: var(--global-padding);
     padding-right: var(--global-padding);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 #logo-container {
@@ -116,7 +120,7 @@ body::-webkit-scrollbar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 15ch;
+    padding-top: 20ch;
     padding-left: var(--global-padding);
     padding-right: var(--global-padding);
     flex-wrap: wrap;
@@ -155,6 +159,11 @@ body::-webkit-scrollbar {
     max-height: 40rem;
     object-fit: cover;
     flex: 0 1 auto;
+}
+
+#section-home > div:last-child {
+    display: flex;
+    align-items: center;
 }
 
 .button-container {
@@ -197,17 +206,39 @@ body::-webkit-scrollbar {
     transform: scale(1.1);
 }
 
+#section-about {
+    display: flex;
+    padding-top: 15ch;
+    padding-left: var(--global-padding);
+}
+
+#section-projects {
+    display: flex;
+    padding-top: 15ch;
+    padding-left: var(--global-padding);
+}
+
 @media (max-width: 1345px) {
 
     #headerDesign {
-        padding: 2ch;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 2ch;
+        padding-left: 2ch;
     }
 
     #section-home {
-        padding: 2ch;
+        padding-top: 15ch;
+        padding-right: 2ch;
+        padding-left: 2ch;
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+
+    #text-info-home {
+        padding-bottom: 2ch;
     }
 
     #icon-img-design {
@@ -221,18 +252,25 @@ body::-webkit-scrollbar {
     }
 
     #img-home {
+        padding-top: 2ch;
         max-width: 100%;
     }
-}
 
-#section-about {
-    display: flex;
-    padding-top: 15ch;
-    padding-left: var(--global-padding);
-}
+    #section-about {
+        padding-top: 15ch;
+        padding-right: 2ch;
+        padding-left: 2ch;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
-#section-projects {
-    display: flex;
-    padding-top: 15ch;
-    padding-left: var(--global-padding);
+    #section-projects {
+        padding-top: 15ch;
+        padding-right: 2ch;
+        padding-left: 2ch;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }
