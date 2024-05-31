@@ -250,8 +250,7 @@ body::-webkit-scrollbar {
     font-family: "Cormorant Garamond", serif;
     font-size: 3.5vh;
     font-weight: 900;
-    color: #E2D0BE;
-    /* color: #f16575; */
+    color: #f16575;
 }
 
 #text-description-about {
@@ -259,7 +258,7 @@ body::-webkit-scrollbar {
     font-size: 2.5vh;
     font-weight: bold;
     margin-bottom: 0;
-    color: #373247;
+    color: #E2D0BE;
 }
 
 .grid-container-skills {
@@ -270,14 +269,15 @@ body::-webkit-scrollbar {
 
 .card-studies {
     display: flex;
+    margin: 2.5em;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     align-items: center;
-    background-color: #ffffff6e;
+    background: linear-gradient(45deg, #373247, #49405e, #5a4f75, #6b5e8c);
     border-radius: 0.5em;
     padding: 2em;
-    box-shadow: 0 3px 8px 8px rgba(101, 213, 241, 0.4);
+    box-shadow: 0 1px 8px 4px rgb(65, 120, 134);
 }
 
 .card-skills {
@@ -334,7 +334,7 @@ body::-webkit-scrollbar {
 }
 
 #copy-email-btn img {
-    width: 50%; /* Ajusta el tamaño de la imagen según sea necesario */
+    width: 50%;
 }
 
 #notification {
@@ -372,7 +372,7 @@ body::-webkit-scrollbar {
     font-family: "Cormorant Garamond", serif;
     font-size: 5vh;
     line-height: 1.5;
-    color: #f16575;
+    color: #E2D0BE;
 }
 
 .grid-container {
@@ -389,9 +389,9 @@ body::-webkit-scrollbar {
     justify-content: center;
     text-align: center;
     align-items: center;
-    background-color: #ffffff6e;
+    background: linear-gradient(45deg, #373247, #49405e, #5a4f75, #6b5e8c);
     border-radius: 0.5em;
-    box-shadow: 0 3px 8px 8px rgba(101, 213, 241, 0.4);
+    box-shadow: 0 1px 8px 4px rgb(65, 120, 134);
     box-sizing: border-box;
 }
 
