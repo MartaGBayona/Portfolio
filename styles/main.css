@@ -122,6 +122,7 @@ body::-webkit-scrollbar {
     flex-direction: row;
     justify-content: space-between;
     padding-top: 20ch;
+    padding-bottom: 10ch;
     padding-left: var(--global-padding);
     padding-right: var(--global-padding);
     flex-wrap: wrap;
@@ -208,14 +209,57 @@ body::-webkit-scrollbar {
 }
 
 #section-about {
-    display: flex;
+    background-color: #E2D0BE;
     padding-top: 15ch;
     padding-left: var(--global-padding);
+    padding-right: var(--global-padding);
+    padding-bottom: 10ch;
+}
+
+#container-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#text-title-about {
+    font-family: "Dancing Script", cursive;
+    font-size: 10vh;
+    font-weight: bold;
+    color: #373247;
+}
+
+.studies, .skills {
+    margin: 0 1rem;
+}
+
+.grid-container-studies {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3ch;
+}
+
+#text-subtitle-about {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 5vh;
+    line-height: 1.5;
+    color: #373247;
+}
+
+#text-title-card {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 3vh;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #f16575;
 }
 
 #section-projects {
     padding-top: 15ch;
+    padding-bottom: 10ch;
     padding-left: var(--global-padding);
+    padding-right: var(--global-padding);
 }
 
 .projects-container {
@@ -239,35 +283,40 @@ body::-webkit-scrollbar {
 }
 
 .grid-container {
-    padding-right: 20ch;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 6ch;
+    grid-gap: 3ch;
 }
 
 .card {
     background-color: #fff;
-    border-radius: 1em;
+    border-radius: 0.5em;
     padding: 2.5em;
 }
 
 @media screen and (max-width: 1200px) {
     .grid-container {
-        padding-right: 0;
         grid-template-columns: repeat(3, 1fr);
+    }
+    .grid-container-studies {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media screen and (max-width: 900px) {
     .grid-container {
-        padding-right: 0;
         grid-template-columns: repeat(2, 1fr);
+    }
+    .grid-container-studies {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
 @media screen and (max-width: 600px) {
     .grid-container {
-        padding-right: 0;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .grid-container-studies {
         grid-template-columns: repeat(1, 1fr);
     }
 }
