@@ -209,7 +209,6 @@ body::-webkit-scrollbar {
 }
 
 #section-about {
-    background-color: #E2D0BE;
     padding-top: 15ch;
     padding-left: var(--global-padding);
     padding-right: var(--global-padding);
@@ -227,7 +226,7 @@ body::-webkit-scrollbar {
     font-family: "Dancing Script", cursive;
     font-size: 10vh;
     font-weight: bold;
-    color: #373247;
+    color: #E2D0BE;
 }
 
 .studies, .skills {
@@ -244,14 +243,15 @@ body::-webkit-scrollbar {
     font-family: "Cormorant Garamond", serif;
     font-size: 5vh;
     line-height: 1.5;
-    color: #373247;
+    color: #E2D0BE;
 }
 
 #text-title-card {
     font-family: "Cormorant Garamond", serif;
     font-size: 3.5vh;
     font-weight: 900;
-    color: #f16575;
+    color: #E2D0BE;
+    /* color: #f16575; */
 }
 
 #text-description-about {
@@ -277,7 +277,7 @@ body::-webkit-scrollbar {
     background-color: #ffffff6e;
     border-radius: 0.5em;
     padding: 2em;
-    box-shadow: 0 3px 8px 8px rgba(241, 101, 117, 0.4);
+    box-shadow: 0 3px 8px 8px rgba(101, 213, 241, 0.4);
 }
 
 .card-skills {
@@ -290,12 +290,63 @@ body::-webkit-scrollbar {
     background-color: #ffffff6e;
     border-radius: 0.5em;
     padding: 2em;
-    box-shadow: 0 3px 8px 8px rgba(241, 101, 117, 0.4);
+    box-shadow: 0 3px 8px 8px rgba(101, 213, 241, 0.4);
 }
 
 .card-skills img {
     padding: 1.5em;
 }
+
+.email-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+
+#email-address {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 3.5vh;
+    font-weight: 900;
+    color: #f16575;
+}
+
+#copy-email-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3ch;
+    background-color: #E2D0BE;
+    cursor: pointer;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: bold;
+    color: #373247;
+    font-size: large;
+    text-decoration: none;
+    border-radius: 1ch;
+    transition: 0.5s;
+}
+
+#copy-email-btn:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+
+#copy-email-btn img {
+    width: 50%; /* Ajusta el tamaño de la imagen según sea necesario */
+}
+
+#notification {
+    margin-top: 1em;
+    font-size: 1em;
+    color: #4CAF50;
+}
+
+.hidden {
+    display: none;
+}
+
 
 #section-projects {
     padding-top: 15ch;
@@ -326,25 +377,35 @@ body::-webkit-scrollbar {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 3ch;
 }
 
 .card-projects {
     display: flex;
+    margin: 2.5em;
+    padding-bottom: 1.5em;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     align-items: center;
     background-color: #ffffff6e;
     border-radius: 0.5em;
-    padding: 2.5em;
     box-shadow: 0 3px 8px 8px rgba(101, 213, 241, 0.4);
+    box-sizing: border-box;
+}
+
+.card-projects img {
+    width: 100%;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    margin: 0;
+    padding: 0;
 }
 
 @media screen and (max-width: 1200px) {
     .grid-container {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
     .grid-container-studies {
         grid-template-columns: repeat(2, 1fr);
@@ -353,7 +414,7 @@ body::-webkit-scrollbar {
 
 @media screen and (max-width: 900px) {
     .grid-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
     .grid-container-studies {
         grid-template-columns: repeat(1, 1fr);

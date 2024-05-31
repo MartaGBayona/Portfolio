@@ -22,3 +22,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+const email = "marta.g.bayona@gmail.com";
+
+const copyEmailButton = document.getElementById('copy-email-btn') as HTMLButtonElement;
+const notification = document.getElementById('notification') as HTMLParagraphElement;
+const emailAddress = document.getElementById('email-address') as HTMLSpanElement;
+
+emailAddress.textContent = email;
+
+copyEmailButton.addEventListener('click', () => {
+    navigator.clipboard.writeText(email).then(() => {
+        notification.classList.remove('hidden');
+        setTimeout(() => {
+            notification.classList.add('hidden');
+        }, 2000);
+    }).catch(err => {
+        console.error('Could not copy text: ', err);
+    });
+});
