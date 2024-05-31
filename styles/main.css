@@ -21,7 +21,7 @@ body::-webkit-scrollbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.8);
     padding-left: var(--global-padding);
     padding-right: var(--global-padding);
     position: fixed;
@@ -66,7 +66,7 @@ body::-webkit-scrollbar {
 }
 
 .dropbtn {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0);
     color: #373247;
     padding: 1.5em;
     font-size: large;
@@ -79,7 +79,7 @@ body::-webkit-scrollbar {
     display: none;
     position: absolute;
     color: #373247;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.7);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -249,10 +249,52 @@ body::-webkit-scrollbar {
 
 #text-title-card {
     font-family: "Cormorant Garamond", serif;
-    font-size: 3vh;
-    font-weight: bold;
-    line-height: 1.5;
+    font-size: 3.5vh;
+    font-weight: 900;
     color: #f16575;
+}
+
+#text-description-about {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2.5vh;
+    font-weight: bold;
+    margin-bottom: 0;
+    color: #373247;
+}
+
+.grid-container-skills {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 3ch;
+}
+
+.card-studies {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: #ffffff6e;
+    border-radius: 0.5em;
+    padding: 2em;
+    box-shadow: 0 3px 8px 8px rgba(241, 101, 117, 0.4);
+}
+
+.card-skills {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: #ffffff6e;
+    border-radius: 0.5em;
+    padding: 2em;
+    box-shadow: 0 3px 8px 8px rgba(241, 101, 117, 0.4);
+}
+
+.card-skills img {
+    padding: 1.5em;
 }
 
 #section-projects {
@@ -288,10 +330,16 @@ body::-webkit-scrollbar {
     grid-gap: 3ch;
 }
 
-.card {
-    background-color: #fff;
+.card-projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: #ffffff6e;
     border-radius: 0.5em;
     padding: 2.5em;
+    box-shadow: 0 3px 8px 8px rgba(101, 213, 241, 0.4);
 }
 
 @media screen and (max-width: 1200px) {
