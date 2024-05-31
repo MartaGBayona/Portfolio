@@ -423,6 +423,35 @@ body::-webkit-scrollbar {
     color:#f16575;
 }
 
+#footer-design {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(255, 255, 255);
+    width: 100%;
+    padding: 1em;
+    box-sizing: border-box; 
+    flex-wrap: wrap; 
+}
+
+.container-footer {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    margin-right: 1em; 
+}
+
+#logo-footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo-footer-design {
+    width: auto;
+    max-height: 15em;
+}
+
 @media screen and (max-width: 1200px) {
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
