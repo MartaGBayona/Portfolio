@@ -298,6 +298,7 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     margin-left: 3ch;
+    margin-right: 3ch;
     background-color: #E2D0BE;
     cursor: pointer;
     font-family: "Cormorant Garamond", serif;
