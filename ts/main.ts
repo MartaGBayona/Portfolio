@@ -1,14 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
     const dropdown = document.querySelector('.dropdown');
     const dropdownContent = document.querySelector('.dropdown-content');
+    let timeoutId: number;
     
     dropdown?.addEventListener('mouseenter', () => {
         dropdownContent?.classList.add('show');
+
+        clearTimeout(timeoutId)
     });
 
-    dropdown?.addEventListener('mouseleave', () => {
-        dropdownContent?.classList.remove('show');
-    });
+    dropdown?.addEventListener("mouseleave", () => {
+        timeoutId = window.setTimeout(() => {
+            dropdownContent?.classList.remove("show");
+        }, 2000)
+    })
 });
 
 document.addEventListener('DOMContentLoaded', () => {

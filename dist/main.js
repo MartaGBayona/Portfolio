@@ -2,11 +2,15 @@
 document.addEventListener('DOMContentLoaded', () => {
     const dropdown = document.querySelector('.dropdown');
     const dropdownContent = document.querySelector('.dropdown-content');
+    let timeoutId;
     dropdown === null || dropdown === void 0 ? void 0 : dropdown.addEventListener('mouseenter', () => {
         dropdownContent === null || dropdownContent === void 0 ? void 0 : dropdownContent.classList.add('show');
+        clearTimeout(timeoutId);
     });
-    dropdown === null || dropdown === void 0 ? void 0 : dropdown.addEventListener('mouseleave', () => {
-        dropdownContent === null || dropdownContent === void 0 ? void 0 : dropdownContent.classList.remove('show');
+    dropdown === null || dropdown === void 0 ? void 0 : dropdown.addEventListener("mouseleave", () => {
+        timeoutId = window.setTimeout(() => {
+            dropdownContent === null || dropdownContent === void 0 ? void 0 : dropdownContent.classList.remove("show");
+        }, 2000);
     });
 });
 document.addEventListener('DOMContentLoaded', () => {

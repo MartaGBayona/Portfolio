@@ -107,6 +107,10 @@ body::-webkit-scrollbar {
     color: #E2D0BE;
 }
 
+.dropdown-content.show {
+    display: block;
+}
+
 @media (max-width: 768px) {
     .container .link {
         display: none;
