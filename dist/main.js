@@ -1,17 +1,25 @@
 "use strict";
-document.addEventListener('DOMContentLoaded', () => {
-    const dropdown = document.querySelector('.dropdown');
+window.addEventListener('load', () => {
+    const dropdownButton = document.querySelector('.dropbtn');
     const dropdownContent = document.querySelector('.dropdown-content');
-    let timeoutId;
-    dropdown === null || dropdown === void 0 ? void 0 : dropdown.addEventListener('mouseenter', () => {
-        dropdownContent === null || dropdownContent === void 0 ? void 0 : dropdownContent.classList.add('show');
-        clearTimeout(timeoutId);
-    });
-    dropdown === null || dropdown === void 0 ? void 0 : dropdown.addEventListener("mouseleave", () => {
-        timeoutId = window.setTimeout(() => {
-            dropdownContent === null || dropdownContent === void 0 ? void 0 : dropdownContent.classList.remove("show");
-        }, 2000);
-    });
+    if (dropdownButton && dropdownContent) {
+        // Event listener para abrir/cerrar el dropdown al hacer clic en el botón
+        dropdownButton.addEventListener('click', (event) => {
+            event.stopPropagation(); // Evita que el clic se propague al documento
+            dropdownContent.classList.toggle('show');
+            console.log('Dropdown toggled');
+        });
+        // Event listener para cerrar el dropdown cuando se hace clic fuera de él
+        document.addEventListener('click', (event) => {
+            if (!dropdownButton.contains(event.target) && !dropdownContent.contains(event.target)) {
+                dropdownContent.classList.remove('show');
+                console.log('Clicked outside dropdown');
+            }
+        });
+    }
+    else {
+        console.error("El dropdownButton o dropdownContent es null. No se puede inicializar el dropdown.");
+    }
 });
 document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', () => {
