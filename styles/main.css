@@ -370,6 +370,59 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+.container-form {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+}
+
+.form-group {
+    margin-bottom: 2ch;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-control {
+    font-family: "Cormorant Garamond", serif;
+    color: #E2D0BE;
+    padding: 1em;
+    background-color: #373247;
+    border: 1px solid;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea.form-control {
+    height: 5em;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start; /* Alinea los elementos en la parte superior */
+}
+
+
+.btn {
+    display: block;
+    font-family: "Cormorant Garamond", serif;
+    width: 100%;
+    padding: 10px 20px;
+    background-color:#E2D0BE ;
+    border: none;
+    border-radius: 5px;
+    color:#373247;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-style {
+    text-align: center;
+}
+
 
 #section-projects {
     padding-top: 15ch;
