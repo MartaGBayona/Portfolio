@@ -51,3 +51,31 @@ copyEmailButton.addEventListener('click', () => {
         console.error('Could not copy text: ', err);
     });
 });
+
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     const form = document.getElementById('contact-form') as HTMLFormElement;
+
+//     form.addEventListener('submit', async (event: Event) => {
+//         event.preventDefault();
+        
+//         const formData = new FormData(form);
+
+//         try {
+//             const response = await fetch('https://formsubmit.co/659bcf75fb1ab54b039df1954a7c86bd', {
+//                 method: 'POST',
+//                 body: formData
+//             });
+
+//             if (response.ok) {
+//                 alert('Correo enviado con éxito!');
+//                 form.reset();
+//             } else {
+//                 throw new Error('Error al enviar el correo. Intenta nuevamente.');
+//             }
+//         } catch (error) {
+//             console.error('Error:', error);
+//             alert('Error al enviar el correo. Intenta nuevamente.');
+//         }
+//     });
+// });
