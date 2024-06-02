@@ -281,6 +281,42 @@ body::-webkit-scrollbar {
     box-shadow: 0 1px 8px 4px rgb(65, 120, 134);
 }
 
+.skills {
+    margin: 0 1rem;
+    text-align: center; 
+    width: 100%;
+}
+
+.grid-container-skills {
+    display: grid;
+    padding: 3em;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 7ch;
+}
+
+.card-skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding-right: 2ch;
+    background: linear-gradient(45deg, #373247, #49405e, #5a4f75, #6b5e8c);
+    border-radius: 0.5em;
+    box-shadow: 0 1px 8px 4px rgb(65, 120, 134);
+}
+
+.card-skills img {
+    padding: 1.5em;
+}
+
+.name-skill {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 3vh;
+    font-weight: 900;
+    color: #f16575;
+}
+
 .email-container {
     display: flex;
     flex-direction: column;
@@ -464,6 +500,16 @@ body::-webkit-scrollbar {
     .grid-container-studies {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .grid-container-skills {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media  screen and (max-width:1000px) {
+    .grid-container-skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media screen and (max-width: 900px) {
@@ -473,6 +519,7 @@ body::-webkit-scrollbar {
     .grid-container-studies {
         grid-template-columns: repeat(1, 1fr);
     }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -480,6 +527,10 @@ body::-webkit-scrollbar {
         grid-template-columns: repeat(1, 1fr);
     }
     .grid-container-studies {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .grid-container-skills {
         grid-template-columns: repeat(1, 1fr);
     }
 }
