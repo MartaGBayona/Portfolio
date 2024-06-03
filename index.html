@@ -160,27 +160,24 @@
                     </div>
                     <p id="notification" class="hidden">Email copiado</p>
                 </div>
-                <div class="container-form">
-                    <form target="_blank" action="https://formsubmit.co/659bcf75fb1ab54b039df1954a7c86bd" method="POST">
-                        <div class="form-group">
-                            <div class="form-row">
-                                <div class="col">
-                                    <input type="text" name="name" class="form-control" placeholder="Nombre"
-                                        required>
-                                </div>
-                                <div class="col">
-                                    <input type="email" name="email" class="form-control" placeholder="Email"
-                                        required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Mensaje" class="form-control" name="message" rows="10"
-                                required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-lg btn-dark btn-block">Enviar</button>
-                    </form>
-                </div>
+                <form class="contact_form" action="https://formspree.io/f/xbjnvkjz" method="POST">
+                    <label for="nombre" class="colocar_nombre">
+                        Nombre*:
+                        <input type="text" name="name" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+                    </label>
+                    <label for="email" class="colocar_email">
+                        Email*:
+                        <input type="email" name="email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+                    </label>
+                    <label>
+                        Mensaje*:
+                        <textarea name="message" required="obligatorio" placeholder="Deja aquí tu comentario"></textarea>
+                    </label for="mensaje" class="colocar_mensaje">
+                    <button class="btn" type="submit">Enviar</button>
+                    <p class="aviso">
+                        <span class="obligatorio"> * </span>los campos son obligatorios.
+                    </p>	
+                </form>
             </div>
         </div>
         </div>

@@ -235,7 +235,7 @@ body::-webkit-scrollbar {
 
 .studies {
     margin: 0 1rem;
-    text-align: center; 
+    text-align: center;
 }
 
 .grid-container-studies {
@@ -283,7 +283,7 @@ body::-webkit-scrollbar {
 
 .skills {
     margin: 0 1rem;
-    text-align: center; 
+    text-align: center;
     width: 100%;
 }
 
@@ -343,7 +343,6 @@ body::-webkit-scrollbar {
     cursor: pointer;
     font-family: "Cormorant Garamond", serif;
     font-weight: bold;
-    color: #373247;
     font-size: large;
     text-decoration: none;
     border-radius: 1ch;
@@ -370,57 +369,108 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-.container-form {
+.contact_form {
+    font-family: "Cormorant Garamond", serif;
+    color:#373247;
     display: flex;
     flex-direction: column;
-    padding: 2em;
-}
-
-.form-group {
-    margin-bottom: 2ch;
-}
-
-.form-row {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.form-control {
-    font-family: "Cormorant Garamond", serif;
-    color: #E2D0BE;
-    padding: 1em;
-    background-color: #373247;
-    border: 1px solid;
-    border-radius: 5px;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 35em;
+    height: auto;
+    margin: 80px auto;
+    border-radius: 10px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background-color: azure;
+    padding-left: 30px;
+    padding-right: 30px;
     box-sizing: border-box;
 }
 
-textarea.form-control {
-    height: 5em;
+
+input, textarea {
+    font-family: "Cormorant Garamond", serif;
+    color: #E2D0BE;
+    background-color: rgb(255, 255, 255, 0);
+    width: 35em;
+    height: auto;
+    border-style: solid;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-width: 1px;
+    border-color: #f16575;
+    margin-top: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
 }
 
-.form-row {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start; /* Alinea los elementos en la parte superior */
+
+input {
+    height: 40px;
 }
 
+textarea {
+    height: 15em;
+    resize: vertical;
+}
+
+
+.aviso {
+    font-family: "Cormorant Garamond", serif;
+    color:#373247;
+    font-size: 13px;
+}
 
 .btn {
-    display: block;
     font-family: "Cormorant Garamond", serif;
-    width: 100%;
     padding: 10px 20px;
-    background-color:#E2D0BE ;
+    background-color: #E2D0BE;
     border: none;
     border-radius: 5px;
-    color:#373247;
+    color: #373247;
     font-size: 16px;
     cursor: pointer;
+    transition: 0.5s;
 }
 
-.contact-style {
-    text-align: center;
+.btn:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .contact_form {
+        width: 90%;
+        padding: 20px;
+        margin: 40px auto;
+    }
+
+    input, textarea {
+        width: 30em;
+    }
+
+    textarea {
+        height: 10em;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact_form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        padding: 10px;
+        margin: 20px auto;
+    }
+
+    input, textarea {
+        width: 100%;
+    }
 }
 
 
@@ -514,7 +564,7 @@ textarea.form-control {
 
 .links-style:hover {
     transition: 0.3s;
-    color:#f16575;
+    color: #f16575;
 }
 
 #footer-design {
@@ -524,15 +574,15 @@ textarea.form-control {
     background-color: rgba(255, 255, 255);
     width: 100%;
     padding: 1em;
-    box-sizing: border-box; 
-    flex-wrap: wrap; 
+    box-sizing: border-box;
+    flex-wrap: wrap;
 }
 
 .container-footer {
     display: flex;
-    flex-direction: column; 
-    align-items: flex-start; 
-    margin-right: 1em; 
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 1em;
 }
 
 #logo-footer-container {
@@ -550,6 +600,7 @@ textarea.form-control {
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .grid-container-studies {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -559,7 +610,7 @@ textarea.form-control {
     }
 }
 
-@media  screen and (max-width:1000px) {
+@media screen and (max-width:1000px) {
     .grid-container-skills {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -569,6 +620,7 @@ textarea.form-control {
     .grid-container {
         grid-template-columns: repeat(1, 1fr);
     }
+
     .grid-container-studies {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -579,6 +631,7 @@ textarea.form-control {
     .grid-container {
         grid-template-columns: repeat(1, 1fr);
     }
+
     .grid-container-studies {
         grid-template-columns: repeat(1, 1fr);
     }
