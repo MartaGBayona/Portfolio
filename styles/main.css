@@ -392,7 +392,7 @@ body::-webkit-scrollbar {
 
 input, textarea {
     font-family: "Cormorant Garamond", serif;
-    color: #E2D0BE;
+    color: black;
     background-color: rgb(255, 255, 255, 0);
     width: 35em;
     height: auto;
