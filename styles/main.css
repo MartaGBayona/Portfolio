@@ -295,15 +295,12 @@ body::-webkit-scrollbar {
 }
 
 .card-skills {
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     text-align: center;
     align-items: center;
-    padding-right: 2ch;
-    background: linear-gradient(45deg, #373247, #49405e, #5a4f75, #6b5e8c);
-    border-radius: 0.5em;
-    box-shadow: 0 1px 8px 4px rgb(65, 120, 134);
 }
 
 .card-skills img {
@@ -608,6 +605,22 @@ textarea {
     .grid-container-skills {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    #skills-design img {
+        width: 2.5ch;
+    }
+
+    .card-projects {
+        padding-bottom: 1ch;
+    }
+
+    #text-title-card {
+        padding: 0;
+    }
+
+    .grid-container-skills {
+        grid-gap: 0;
+    }
 }
 
 @media screen and (max-width:1000px) {
@@ -638,6 +651,14 @@ textarea {
 
     .grid-container-skills {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .links-design {
+        gap: 0.5ch;
+    }
+
+    #skills-design {
+        gap: 0;
     }
 }
 
