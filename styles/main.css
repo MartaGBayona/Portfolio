@@ -219,6 +219,41 @@ body::-webkit-scrollbar {
     padding-bottom: 10ch;
 }
 
+.container-info-about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+
+#gif-about {
+    width: 40em;
+    height: auto;
+    object-fit: cover;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#text-info-about {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2vh;
+    line-height: 1.5;
+    color: #E2D0BE;
+}
+
+#text-title-about {
+    font-family: "Dancing Script", cursive;
+    max-width: 600px;
+    font-size: 10vh;
+    font-weight: bold;
+    color: #E2D0BE;
+}
+
 #container-about {
     display: flex;
     flex-direction: column;
@@ -226,12 +261,19 @@ body::-webkit-scrollbar {
     align-items: center;
 }
 
-#text-title-about {
-    font-family: "Dancing Script", cursive;
-    font-size: 10vh;
-    font-weight: bold;
-    color: #E2D0BE;
+@media (max-width: 1422px) {
+    .container-info-about {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        padding-left: 4em;
+        padding-right: 4em;
+    }
+
+    #gif-about {
+        max-width: 100%;
+    }
 }
+
 
 .studies {
     margin: 0 1rem;
